@@ -14,7 +14,10 @@ function createSquare(){
         squaresContainer.append(square);
 
         square.addEventListener("click", creaColoreEText);
+
+        
     }
+    piazzaBomba();
 }
 
 
@@ -31,3 +34,20 @@ function creaColoreEText(){
     this.classList.toggle("bg_linear_blue");
 }
 
+
+function piazzaBomba(){
+
+    let contatoreBomba = 0;
+    let randomBoolean;
+    let square = document.getElementsByClassName('square');
+    
+    for(let x=1; x<=square.length; x++) {
+         randomBoolean = Math.random() >= 0.5;
+         
+
+        if(randomBoolean == true && contatoreBomba <16){
+            square[x].innerHTML = "BOMB"
+            contatoreBomba++;
+        }
+    }
+}
