@@ -33,6 +33,10 @@ function removeSquare(){
 function creaColoreEText(){
     this.classList.toggle("bg_linear_blue");
 }
+function creaColoreRed(){
+    this.classList.remove("bg_linear_blue");
+    this.classList.toggle("bg_red");
+}
 
 
 function piazzaBomba(){
@@ -46,6 +50,7 @@ function piazzaBomba(){
 
         if(square[casualSquare].textContent !="BOMB"){
         square[casualSquare].innerHTML="BOMB";
+        square[casualSquare].addEventListener("click", creaColoreRed);
         bombBox.push(casualSquare);
         }
     }

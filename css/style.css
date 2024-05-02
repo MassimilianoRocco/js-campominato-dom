@@ -44,6 +44,10 @@
     linear-gradient(90deg, rgba(242,242,242,0.9626225490196079) 0%, rgba(96,96,251,1) 50%, rgba(122,219,238,1) 100%);
     color: black;
 }
+.square.bg_red{
+    background-color: red;
+    color: black;
+}
 
 
 
