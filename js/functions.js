@@ -37,17 +37,16 @@ function creaColoreEText(){
 
 function piazzaBomba(){
 
-    let contatoreBomba = 0;
-    let randomBoolean;
-    let square = document.getElementsByClassName('square');
-    
-    for(let x=1; x<=square.length; x++) {
-         randomBoolean = Math.random() >= 0.5;
-         
+    const square = document.getElementsByClassName('square');
+    let casualSquare;
+    const bombBox = [];
 
-        if(randomBoolean == true && contatoreBomba <16){
-            square[x].innerHTML = "BOMB"
-            contatoreBomba++;
+    while(bombBox.length < 16 ) {
+        casualSquare = Math.floor(Math.random() * square.length);
+
+        if(square[casualSquare].textContent !="BOMB"){
+        square[casualSquare].innerHTML="BOMB";
+        bombBox.push(casualSquare);
         }
     }
 }
