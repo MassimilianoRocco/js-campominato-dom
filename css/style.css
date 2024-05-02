@@ -1,0 +1,96 @@
+/*****                 ****/
+/*****      RESET      ****/
+/*****                 ****/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*****                 ****/
+/***** GENERAL _STYLE  ****/
+/*****                 ****/
+
+.test-h{
+    height: 800px;
+}
+
+.flex{
+    display: flex;
+}
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+.justify-center{
+    justify-content: center;
+}
+.justify-end{
+    justify-content: flex-end;
+}
+.align-center{
+    align-items: center;
+}
+.wrap-on{
+    flex-wrap: wrap;
+}
+.border-on{
+    border: 1px solid black;
+}
+
+
+.square.bg_linear_blue{
+    background: 
+    linear-gradient(90deg, rgba(242,242,242,0.9626225490196079) 0%, rgba(96,96,251,1) 50%, rgba(122,219,238,1) 100%);
+    color: black;
+}
+
+
+
+/*****                 ****/
+/***** CONTENT _STYLE  ****/
+/*****                 ****/
+
+.row{
+    width: 100vw;
+    padding: 1rem;
+    background:
+    linear-gradient(90deg, rgba(242,242,242,0.9626225490196079) 0%, rgba(96,96,251,1) 50%, rgba(122,219,238,1) 100%);
+}
+
+.superior-bar{
+    margin-bottom: 1rem;
+}
+
+#squares-container{
+    width: 1000px;
+    margin: auto;
+    background-color: darkgrey;
+}
+
+
+#create-button{
+    border-radius: 15px;
+    padding: 1rem;
+    background:
+    linear-gradient(90deg, rgba(242,242,242,0.9626225490196079) 0%, rgba(96,96,251,1) 50%, rgba(122,219,238,1) 100%);
+    margin: 0 0.5rem;
+}
+#delete-button{
+    border-radius: 15px;
+    padding: 1rem;
+    background:
+    linear-gradient(90deg, rgba(242,242,242,0.9626225490196079) 0%, rgba(96,96,251,1) 50%, rgba(122,219,238,1) 100%);
+    margin: 0 0.5rem;
+}
+
+#number-input{
+    width: 20rem;
+    height: 2rem;
+}
+
+.square{
+    width: 100px;
+    height: 100px;
+    color: darkgrey;
+}
