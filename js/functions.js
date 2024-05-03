@@ -60,8 +60,8 @@ function piazzaBomba(){
     while(bombBox.length < 16 ) {
         casualSquare = Math.floor(Math.random() * square.length);
 
-        if(square[casualSquare].textContent !="BOMB"){
-        square[casualSquare].innerHTML="BOMB";
+        if(!square[casualSquare].textContent.includes("BOMB")){
+        square[casualSquare].innerHTML= square[casualSquare].innerHTML + "BOMB";
         square[casualSquare].addEventListener("click", creaColoreRed);
         bombBox.push(casualSquare);
         }
