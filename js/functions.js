@@ -1,3 +1,7 @@
+let scelteSbagliate = 0;
+let scelteGiuste = 0;
+let numSquares = 0;
+
 function createSquare(){
 
     removeSquare();
@@ -12,10 +16,9 @@ function createSquare(){
         square.classList.add('border-on');
         square.innerHTML = x;
         squaresContainer.append(square);
+        numSquares++;
 
-        square.addEventListener("click", creaColoreEText);
-
-        
+        square.addEventListener("click", creaColoreEText);    
     }
     piazzaBomba();
 }
@@ -32,10 +35,19 @@ function removeSquare(){
 
 function creaColoreEText(){
     this.classList.toggle("bg_linear_blue");
+    scelteGiuste++;
+    if (scelteGiuste == numSquares - 6){
+        alert("Hai Vinto!!");
+    }
 }
 function creaColoreRed(){
     this.classList.remove("bg_linear_blue");
     this.classList.toggle("bg_red");
+    scelteSbagliate++;
+    if(scelteSbagliate == 6 ){
+        alert("Hai Perso!")
+        removeSquare();
+    }
 }
 
 
